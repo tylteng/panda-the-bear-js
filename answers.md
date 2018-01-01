@@ -1,3 +1,4 @@
+PART 1
 Question 1 pt1
 var image = document.body.querySelector('.profile-image');
 var image.src = 'https://placebear.com/400/400';
@@ -59,3 +60,32 @@ Question 14
 var list = document.querySelector('ul.bio-info');
 var item = list.querySelectorAll('li');
 item.forEach(function(li){list.removeChild(li)});
+
+PART 2
+// Warm Up //
+var timeTravelDiv = document.querySelector('#time-travel');
+var timeTravelDivParent = timeTravelDiv.parentNode;
+timeTravelDivParent.remove()
+
+Question 1
+var pikachu = document.querySelector('#right-image');
+var pikachuImage = pikachu.querySelector('img');
+var clone = pikachuImage.cloneNode(true);
+var element = document.querySelector('.portfolio-container');
+element.appendChild(clone);
+
+Question 2
+for(var index = 0; index < 10; index++) {
+  var clone = pikachuImage.cloneNode(true);
+  element.appendChild(clone)
+};
+
+Question 3
+var list = document.querySelector('.bio-info');
+var listItem = document.querySelector('.bio-info-item');
+var listClone = listItem.cloneNode(true);
+var spanLeft = listClone.querySelector('.bio-info-title');
+var spanRight = listClone.querySelector('.bio-info-value');
+spanLeft.textContent = 'Page last updated on'
+spanRight.textContent = Date()
+list.appendChild(listClone)
